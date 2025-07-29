@@ -1,59 +1,118 @@
-# Site Settings
-title: Aditya's Portfolio
-description: A showcase of my projects, skills, and contributions.
-baseurl: ""  # Leave empty if hosting on lelepentol.github.io
-url: "https://lelepentol.github.io"  # Your GitHub Pages URL
+# Site
+repository: github.com/lelepentol
+# favicon: images/favicon.ico (optional)
+
+# Content configuration version
+version: 2
+
+# Personal info
+name: Aditya Novian
+title: Software Development Engineer in Test
+email: aditya.novian@proton.me
+# email_title: Email (override if needed)
+# phone: +123456789 (optional)
+# phone_title: Phone (override if needed)
+website: https://lelepentol.github.io
+# website_title: Portfolio (override if needed)
+
+# Dark Mode (true/false/never)
+darkmode: false
+
+# Social links
 github_username: lelepentol
-email: your-email@example.com  # Optional (add if you want contact)
+# twitter_username: yourhandle (optional)
+# linkedin_username: yourhandle (optional)
 
-# Jekyll Settings
-theme: jekyll-theme-modern-resume  # If using the Modern Resume Theme
-plugins:
-  - jekyll-seo-tag
-  - jekyll-github-metadata
-
-# Social Media Links (customize with your profiles)
-social:
-  - name: GitHub
-    icon: github
+# Additional icon links (optional)
+additional_links:
+  - title: GitHub
+    icon: fab fa-github
     url: https://github.com/lelepentol
+#  - title: LinkedIn
+#    icon: fab fa-linkedin
+#    url: https://linkedin.com/in/yourprofile
 
-# Navigation Links
-navbar:
-  - name: Home
-    url: /
-  - name: Projects
-    url: /#projects
-  - name: About
-    url: /#about
+# Google Analytics (optional)
+# gtag: "UA-XXXXXX-X"
 
 # About Section
-about:
-  name: Aditya Novian
-  role: Open-Source & Automation Enthusiast
-  summary: |
-    Passionate about coding, automation, and sharing knowledge. 
-    Love building tools that solve real-world problems.
-  image: /assets/images/avatar.jpg  # Upload your photo to `assets/images/`
+about_profile_image: assets/images/avatar.jpg
+about_content: |
+  Passionate about coding, automation, and sharing knowledge. 
+  Love building tools that solve real-world problems.
 
-# Skills Section (customize with your tech stack)
-skills:
-  - name: JavaScript
-    level: 70
-  - name: Git/GitHub
-    level: 80
-  - name: HTML/CSS
-    level: 75
-  - name: Bash
-    level: 75
+  **Skills:**  
+  - JavaScript, Git/GitHub, HTML/CSS, Bash  
+  - AI/LLM Integration (Gemma, Ollama)  
+  - Test Automation (Ruby, Selenium)  
 
-# Projects Section (link your GitHub repos)
-projects:
-  - title: HR Question Generator with AI
-    description: Project lets you upload a candidate's CV (PDF), extract it as Markdown, and use a local LLM (Gemma via Ollama) to generate simple HR interview questions with probable answers.
-    github_url: https://github.com/lelepentol/HRQuestionGeneratorWithAI
-    tags: [JavaScript, Automation, LLM, AI]
-  - title: Repository 2
-    description: Automation using Ruby as the framework
-    github_url: https://github.com/lelepentol/ruby-automation
-    tags: [Ruby, Automation]
+# Content Sections (Projects, Experience, Education)
+content:
+  - title: Projects
+    layout: list
+    content:
+      - layout: left
+        title: HR Question Generator with AI
+        link: https://github.com/lelepentol/HRQuestionGeneratorWithAI
+        link_text: View Project
+        additional_links:
+          - title: GitHub Repo
+            icon: fab fa-github
+            url: https://github.com/lelepentol/HRQuestionGeneratorWithAI
+        quote: Generate HR interview questions from CVs using local LLMs.
+        description: |
+          A tool that extracts CVs (PDF) as Markdown and uses Gemma (via Ollama) to generate interview questions with probable answers.
+          **Tech:** JavaScript, AI/LLM, Automation.
+
+      - layout: left
+        title: Ruby Automation Framework
+        link: https://github.com/lelepentol/ruby-automation
+        link_text: View Project
+        additional_links:
+          - title: GitHub Repo
+            icon: fab fa-github
+            url: https://github.com/lelepentol/ruby-automation
+        quote: Automation scripts using Ruby.
+        description: |
+          Custom automation framework for repetitive tasks.  
+          **Tech:** Ruby, Selenium.
+
+  # - title: Experience (uncomment and fill if needed)
+  #   layout: list
+  #   content:
+  #     - layout: right
+  #       title: "Your Company"
+  #       sub_title: "Job Title"
+  #       caption: "2020 - Present"
+  #       description: |
+  #         Details about your role.
+
+  # - title: Education (uncomment and fill if needed)
+  #   layout: list
+  #   content:
+  #     - layout: top-right
+  #       title: "Your University"
+  #       sub_title: "Degree"
+  #       caption: "2016 - 2020"
+  #       description: |
+  #         Relevant coursework or achievements.
+
+# Footer
+footer_show_references: true
+
+# Build settings
+sass:
+  sass_dir: _sass
+  style: compressed
+
+plugins:
+  - jekyll-seo-tag
+
+exclude:
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "node_modules"
+  - "vendor/"
+  - "lib/"
+  - "scripts/"
+  - "docker-compose.yml"
