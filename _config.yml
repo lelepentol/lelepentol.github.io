@@ -36,7 +36,7 @@ additional_links:
 # gtag: "UA-XXXXXX-X"
 
 # About Section
-about_profile_image: assets/images/avatar.jpg
+about_profile_image: images/avatar.jpg
 about_content: |
   Passionate about coding, automation, and sharing knowledge. 
   Love building tools that solve real-world problems.
